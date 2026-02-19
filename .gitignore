@@ -1,0 +1,54 @@
+# ── Secrets & Environment Variables ──────────────────────────────────────────
+# Real .env files contain passwords, API keys, and JWT secrets — never commit
+.env
+.env.local
+.env.production
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+venv/
+.venv/
+*env/
+*.egg-info/
+webAppenv/
+
+# ── SQLite (local dev database — replaced by RDS in production) ───────────────
+*.db
+*.sqlite
+*.sqlite3
+
+# ── Node / Frontend ───────────────────────────────────────────────────────────
+node_modules/
+frontend/dist/
+.nvm
+.npm
+.vscode-server
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── OS & Editor ───────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.claude
+
+# ── Home directory system files (not project files) ──────────────────────────
+.local/
+.dotnet/
+.cache/
+.config/
+.bash_history
+.bash_logout
+.bashrc
+.profile
+.gitconfig
+.lesshst
+.claude.json
