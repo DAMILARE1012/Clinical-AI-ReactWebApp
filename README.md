@@ -34,17 +34,6 @@ A full-stack web application for managing clinical research projects and experim
 
 ---
 
-## Features
-
-- **Authentication** — JWT-based register/login with role-based access control
-- **Projects** — Create and manage clinical research projects
-- **Experiments** — Track experiments linked to projects
-- **AI Chat** — Floating chat widget powered by Groq LLaMA 3.1 with Pinecone RAG
-- **Admin Panel** — User management for admin role
-- **Auto-reconnect DB** — Falls back to SQLite for local dev if MySQL is unreachable
-
----
-
 ## Project Structure
 
 ```
