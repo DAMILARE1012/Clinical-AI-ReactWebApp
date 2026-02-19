@@ -186,35 +186,7 @@ server {
 sudo ln -s /etc/nginx/sites-available/app /etc/nginx/sites-enabled/
 sudo nginx -t && sudo systemctl reload nginx
 ```
-
-### 3. Run backend as a systemd service
-
-Create `/etc/systemd/system/fastapi.service`:
-
-```ini
-[Unit]
-Description=Clinical Research Knowledge Hub - FastAPI Backend
-After=network.target
-
-[Service]
-User=ubuntu
-WorkingDirectory=/home/ubuntu/backend
-EnvironmentFile=/home/ubuntu/backend/.env
-ExecStart=/usr/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000
-Restart=always
-RestartSec=5
-
-[Install]
-WantedBy=multi-user.target
-```
-
-```bash
-sudo systemctl daemon-reload
-sudo systemctl enable fastapi
-sudo systemctl start fastapi
-```
-
-### 4. Managing the backend service
+### 3. Managing the backend service
 
 ```bash
 sudo systemctl status fastapi    # check status
